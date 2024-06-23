@@ -1,0 +1,31 @@
+# main links
+main:
+  - title: "Home"
+    url: https://AurumGuide.github.io/
+  - title: "Tag"
+    url: /tags/  
+  - title: "search"
+    url: /search/
+
+  #- title: "About"
+  #  url: /about/
+
+  #- title: "GitHub"
+  #  url: https://github.com/AurumGuide
+
+  # - title: "Projects"
+  #   url: /projects/
+
+  # - title: "Categories"
+  #   url: /categories/
+
+# sidebar navigation (categories)
+# 2022.02.15 sidebar update : simple ver.
+categories:
+  - title: "Git Blog"
+    url: /categories/GitBlog/
+  - title: "MsSql"
+    url: /categories/MsSql/
+ 
+ 
+ 
