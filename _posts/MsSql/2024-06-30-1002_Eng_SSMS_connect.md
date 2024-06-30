@@ -26,56 +26,56 @@ For the installation process of the SSMS (MSSQL Connection Tool), please refer t
 ### <mark>Access to a Windows account.</mark>
 
 **1.** Start on your computer - Browse to SQL Server Management Studio and click on it.  
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/1.jpg)  
+![SQL Server Management Studio and click on it](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/1.jpg)  
 
 **2.** Do you see the screen where you can connect to the Connect to Server?
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2.jpg) 
+![you can connect to the Connect to Server](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2.jpg) 
    
 **2-1.** Server Type: Choose Database Engine.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-1.jpg) 
+![Choose Database Engine.](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-1.jpg) 
 
 **2-2.** Server name: The name displayed on the screen may vary from computer to computer.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-2.jpg) 
+![Server nam](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-2.jpg) 
      
 **2-3.** Authentication: Please select Window Authentication.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-3.jpg) 
+![Authentication](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-3.jpg) 
 
 **2-4.** Click Connect.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-4.jpg) 
+![Click Connect](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/2-4.jpg) 
 
 **3.** It is when you connect. Isn't it too easy?
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/3.jpg)
+![It is when you connect](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/3.jpg)
  
 ### <mark>Access the MSSQL server with an SA account.</mark>
 - When you install MSSQL Server, the SA account is created by default,  but you must change the settings after accessing the Windows account.  
 - It is more complicated than accessing it with a Windows account, but do not worry because if you look at the capture screen, you can easily follow it.  
 
 **4.** When you log in with a Windows account, click object Explorer - Security - LOGIN - SA - Right mouse
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4.jpg)
+![When you log in with a Windows account](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4.jpg)
 
 **4-1.** Login Properties Window - General - Please enter your password.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-1.jpg)
+![Login Properties Window](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-1.jpg)
 
 **4-2.** Login Properties Window - Status - Click - Select Enabled on the Login Radio button and confirm with the OK button.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-2.jpg)
+![confirm with the OK](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-2.jpg)
 
 **4-3.** On the screen you first connected to, select Mouse Server, right-click, and click Properties.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-3.jpg)
+![select Mouse Server](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-3.jpg)
 
 **4-4.** Pop-up - SQL Server and Window Authentication mode and click OK.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-4.jpg)
+![Window Authentication mode](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/4-4.jpg)
 
 <mark>5. Restart SQL Server.</mark>
 
 **5-1.** Close the SQL Server you connected to, and in Windows, click SQL Server Configuration Manager.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/5-1.jpg)
+![click SQL Server Configuration Manager.](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/5-1.jpg)
 
 **5-2.** In the window, select SQL Server and right-click.
     Click -> Restart to restart SQL Server.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/5-2.jpg)
+![Restart to restart SQL Server.](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/5-2.jpg)
 
 **5-3.** Accessing the MSSQL Server with the SA account.
-![MSSQL 2022 downloads](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/5-3.jpg)
+![MSSQL Server with the SA account.](/assets/images/postsImages/MsSql/1002_Eng_SSMS_connect/5-3.jpg)
 
 
 
