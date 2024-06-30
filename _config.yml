@@ -18,17 +18,17 @@ minimal_mistakes_skin: "plum" #"plum", "default" "air", "aqua", "contrast", "dar
 locale: "en-US" #"en-US"
 title: "AurumGuide"
 title_separator: "&#124;"
-subtitle: # site tagline that appears below site title in masthead
-name: "AurumGuide"
-description: "AurumGuide"
+subtitle: "Developer Guide"
+name: "Aurum"
+description: "Developer site studying development language."
 url: "https://AurumGuide.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: #"AurumGuide/AurumGuide.github.io"
 teaser: #
-# logo                     : "/assets/images/meee.svg"
+logo : # "/assets/images/favicon/aurumguide.png"
 #"/assets/images/monster.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs            : true # true, false (default)
 words_per_minute: 200
 comments:
   provider: "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -96,8 +96,8 @@ analytics:
 # Site Author
 author:
   name: "AurumGuide"
-  # avatar:  # "/assets/images/meee.svg"
-  #   bio              : ""
+  avatar: "/assets/images/favicon/aurumguide.png"  # "/assets/images/meee.svg"
+  bio              : "Developer Guide"
   location         : "City of San Diego"
   # email            : ""
   links:
