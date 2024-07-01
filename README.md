@@ -1,1 +1,1 @@
-﻿# aurumguide.github.io -- ..
+﻿# aurumguide.github.io
