@@ -8,7 +8,6 @@ tags:
   - [MsSql]
 
 ## permalink: /MsSql/SSMS_Connect/
-
 toc: true
 toc_sticky: true
  
