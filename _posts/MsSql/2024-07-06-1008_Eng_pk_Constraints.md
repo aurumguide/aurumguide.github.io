@@ -6,7 +6,6 @@ categories:
   - MsSql
 tags:
   - [MsSql,Constraints]
-
 ## permalink: /MsSql/SSMS_Connect/
 
 toc: true

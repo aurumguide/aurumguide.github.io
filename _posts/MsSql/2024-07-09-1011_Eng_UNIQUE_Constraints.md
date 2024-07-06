@@ -7,7 +7,7 @@ categories:
 tags:
   - [MsSql,Constraints]
 
-## permalink: /MsSql/SSMS_Connect/
+## permalink: /MsSql//
 
 toc: true
 toc_sticky: true
