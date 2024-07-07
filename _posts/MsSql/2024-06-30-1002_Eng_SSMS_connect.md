@@ -5,7 +5,7 @@ excerpt: ""
 categories:
   - MsSql
 tags:
-  - [MsSql,SSMS]
+  - [MsSql]
 
 ##permalink: /MsSql/SSMS_Connect/
 
