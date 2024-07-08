@@ -1,5 +1,5 @@
 ---
-title: "How to create and delete MSSQL unique constraints."
+title: "How to create and delete MSSQL unique constraints"
 excerpt: ""
 
 categories:
