@@ -7,7 +7,7 @@ categories:
 tags:
   - [MsSql,Constraints]
 
-## permalink: /MsSql//
+## permalink: /MsSql//a
 
 toc: true
 toc_sticky: true
