@@ -21,7 +21,7 @@ title_separator: "&#124;"
 subtitle: "Developer Guide"
 name: "Aurum"
 description: "Developer site studying development language."
-url: "https://AurumGuide.github.io"
+url: "https://aurumguide.com"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: #"AurumGuide/AurumGuide.github.io"
 teaser: #
