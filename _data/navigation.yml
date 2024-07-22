@@ -23,10 +23,11 @@ main:
 # 2022.02.15 sidebar update : simple ver.
 categories:
   - title: "MsSql"
+    tag: "MsSql"
     url: /categories/MsSql/
   - title: "Git Blog"
+    tag: "GitBlog"
     url: /categories/GitBlog/
 
- 
  
  

@@ -1,4 +1,6 @@
 {% assign navigation = site.data.navigation[include.nav] %}
+{% assign sum = site.posts | size %}
+ 
 
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
@@ -8,11 +10,19 @@
     <!-- <li>
       <span class="nav__total">🌴 Total Posts: {{site.posts | size}}</span>
     </li> -->
-    
+    <span style="font-size: 11pt"><b>TOTAL ({{sum}})</b></span>    
     {% for nav in navigation %}
       <li>
-        {% if nav.url %}
-              <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+        {% assign cattotal = 0 %}
+        {% for category in site.categories %}
+          {% if category[0] == nav.tag  %}
+            {% assign cattotal = cattotal | plus: category[1].size %}
+            
+          {% endif %}
+        {% endfor %}
+        
+        {% if nav.url %} 
+              <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}({{cattotal}})</span></a>              
         {% else %}
           <!-- title -->
               <span class="nav__sub-title">{{ nav.title }}</span>
@@ -20,12 +30,12 @@
         {% endif %}
 
         {% if nav.children != null %}
-        <ul>
+        <ul>           
           {% for child in nav.children %}
             <!-- sub-title -->
             {% for category in site.categories %}
               {% if category[0] == child.title %}
-                <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }} ({{ category | last | size }})</a></li>
+              <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }} ({{ category | last | size }})</a></li>
               {% endif %}
             {% endfor %}
           {% endfor %}
