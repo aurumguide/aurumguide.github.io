@@ -7,7 +7,7 @@ categories:
 tags:
   - [MsSql]
 
-## permalink: /MsSql/Mssql_Install/
+## permalink: /MsSql/Mssql_Install///
 
 toc: true
 toc_sticky: true
