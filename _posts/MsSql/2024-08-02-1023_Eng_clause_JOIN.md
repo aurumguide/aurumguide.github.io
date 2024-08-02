@@ -7,7 +7,7 @@ categories:
 tags:
   - [clause]
 
-## permalink: /MsSql///
+## permalink: /MsSql///dd
 
 toc: true
 toc_sticky: true
