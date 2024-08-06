@@ -7,7 +7,7 @@ categories:
 tags:
   - [GitBlog]
 
-## permalink: /MsSql/Mssql_Install/////
+## permalink: /MsSql/Mssql_Install///////
 
 toc: true
 toc_sticky: true
