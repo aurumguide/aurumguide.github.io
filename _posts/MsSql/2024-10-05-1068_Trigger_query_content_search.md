@@ -12,8 +12,8 @@ tags:
 toc: true
 toc_sticky: true
  
-date: 2024-10-03
-last_modified_at: 2024-10-03
+date: 2024-10-10
+last_modified_at: 2024-10-10
 ---
  
 For readers who have a hard time distinguishing between usable and impossible grammars when implementing functions, I will explain the exact concept of deterministic and nondeterministic functions.
