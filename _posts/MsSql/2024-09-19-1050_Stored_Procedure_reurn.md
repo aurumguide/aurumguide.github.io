@@ -5,7 +5,7 @@ excerpt: ""
 categories:
   - MsSql
 tags:
-  - [MsSql]
+  - [MsSql procedure]
 
 ## permalink: /MsSql 
 

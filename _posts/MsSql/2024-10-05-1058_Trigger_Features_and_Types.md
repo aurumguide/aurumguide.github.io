@@ -1,115 +1,52 @@
 ---
-title: "MSSQL Deterministic and Non-Deterministic Functions Explained"
+title: "MSSQL Trigger Features and Types"
 excerpt: ""
 
 categories:
   - MsSql
 tags:
-  - [MsSql]
+  - [MsSql Trigger]
 
 ## permalink: /MsSql///////
 
 toc: true
 toc_sticky: true
  
-date: 2024-10-10
-last_modified_at: 2024-10-10
+date: 2024-10-05
+last_modified_at: 2024-10-05
 ---
  
-For readers who have a hard time distinguishing between usable and impossible grammars when implementing functions, I will explain the exact concept of deterministic and nondeterministic functions.
+A trigger, as the name suggests, is a stored procedure that is automatically executed when an event occurs on the database server.
 
-## <mark>Comparison of deterministic and nondeterministic functions.</mark>
+## <mark> MSSQL Trigger Features </mark>
 
-### ***Deterministic functions.***
+- There are many types of triggers, but in SQL SERVER, LOGON Trigger, DML Trigger, and DDL Trigger are mainly used.
+- LOGON Trigger creates a database session when a user logs in.
+- That is, Trigger can be used in response to the LOGON event that occurs when a database session is established.
+- DML Trigger can be used in response to an event when using the DML (Data Manipulation Language) language.
+- DDL Trigger can be used in response to various DDL (Data Definition Language) events that are mainly used.
 
-- It is easy to understand if you think of deterministic functions as meaning that data is determined from the database's perspective and can return results.
-- In other words, a representative deterministic function is the SUM() function.
-- A database is a sum of determined tables and columns.
+### ***MSSQL Trigger Description.***
 
-### ***Nondeterministic functions.***
+![MSSQL Trigger Features.](/assets/images/postsImages/MsSql/1058_Trigger_Features_and_Types/LOGON_Trigger.png)
 
-## <mark>Deterministic function, nondeterministic function errors.</mark>
+## <mark> MSSQL Trigger Type-by-Type Characteristics.</mark>
 
-- Deterministic functions cause errors when used in functions because the database cannot determine the data to be returned.
-- That is, a representative deterministic function is the NEWID() function.
-- NEWID() is a random function, which means that the database cannot determine the value to return from the function.
-- Additionally, try-catch, delete, update, print, etc. also cause errors when used in functions.
-- If you understand the principles of non-deterministic functions correctly, you can return them through view instead of calling NEWID() directly.
-- This is a reference link for View.
-- [How to create and delete an MSSQL view.](https://aurumguide.com/mssql/1007_Eng_view_Create/ "Here is a reference link for View.")
+### ***LOGON Trigger Characteristics.***
 
-### ***Error when using NEWID().***
+- LOGON Trigger is executed in response to the LOGON event that occurs when a user's session is established.
 
-- Msg 443, Level 16, State 1, Procedure AurumGuide_DeterministicFunc, Line 10 [Batch Start Line 21]  
-    Invalid use of a side-effecting operator 'newid' within a function.
-- Source code.
+- LOGON Trigger can be created and used in two ways.
+- The first way is to create it directly using Transact-SQL statements.
+- The second way is to create it as an assembly method in Microsoft. NET Framework CLR (Common Language Runtime) using a C# program and upload it to SQL Server for use.
 
-```sql
-CREATE FUNCTION dbo.AurumGuide_DeterministicFunc 
-(
- @PARAM1 varchar(10)
-,@PARAM2 varchar(10)
-)
-RETURNS varchar(100)
-AS
-BEGIN
-    declare @returnStr varchar(100);
-    set @returnStr  = 'Hello World ' +  CAST(NEWID() AS VARCHAR(50));
-    RETURN @returnStr
-END;
-go
-```
+### ***DDL Trigger Characteristics.***
 
-### ***Error when using try-catch, delete, update, print.***
+- DDL Trigger is a trigger that can be used in response to events for DDL operations such as CREATE, ALTER, DROP, etc.
+- For example, it is used when a log is required when modifying or deleting a table.
 
-- Msg 443, Level 16, State 15, Procedure AurumGuide_DeterministicFunc1, Line 16 [Batch Start Line 40]  
-    Invalid use of a side-effecting operator 'DELETE' within a function.
-- Description of the error.
+### ***DML Trigger Characteristics.***
 
-![This is a description of a non-deterministic function error.](/assets/images/postsImages/MsSql/1057_function_Deterministic/1.png)
-
-- Source code.
-
-```sql
-DROP TABLE IF EXISTS AurumGuide_Deterministic;
--- Create Sample Table 
-CREATE TABLE AurumGuide_Deterministic (
-    AurumId           INT NOT NULL,
-    AurumNm           VARCHAR(255) NOT NULL,
-    AurumAge          INT  NULL,
-    AurumAddress      VARCHAR(500)  NULL
-);
--- Create Sample Data
-INSERT INTO dbo.AurumGuide_Deterministic(AurumId,AurumNm) 
-VALUES (272, N'Ken')
-      ,(273, N'Brian')
-      ,(274, N'Stephen')
-      ,(275, N'Michael')
-      ,(276, N'Linda');
-GO      
-CREATE FUNCTION AurumGuide_DeterministicFunc1 (@AurumId int)
-RETURNS @Return_AurumGuide  TABLE
-(  
-    AurumId int,
-    AurumNm varchar(255) NULL 
-) AS
-BEGIN
-/*
-    PRINT(@ParamAurumId);
-    DELETE FROM AurumGuide_Deterministic;
-    INSERT AurumGuide_Deterministic(AurumId) values(100);
-    UPDATE AurumGuide_Deterministic SET AurumId=1;
-    SELECT newid();
-*/
-  IF(@AurumId IS NOT NULL)
-  BEGIN
-     DELETE FROM AurumGuide_Deterministic;
-
-     INSERT @Return_AurumGuide
-     SELECT AurumId,AurumNm
-       FROM AurumGuide_Deterministic af
-       WHERE af.AurumId  =  @AurumId;
-  END 
-  RETURN;
-END;
-```
+- DML Trigger, mainly used by DBAs and developers, is a trigger that can be used in response to events for DML operations such as INSERT, UPDATE, and DELETE.
+- In other words, when the data in the table changes, the trigger event is automatically executed.
+- DML Trigger is often used to track data logs or apply data integrity.
