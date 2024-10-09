@@ -7,7 +7,7 @@ categories:
 tags:
   - [MsSql Trigger]
 
-## permalink: /MsSql///////
+## permalink: /MsSql///////   ///////
 
 toc: true
 toc_sticky: true
