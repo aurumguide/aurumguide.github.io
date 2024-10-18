@@ -7,7 +7,7 @@ categories:
 tags:
   - [MsSql Indexe]
 
-## permalink: /MsSql////  ///
+## permalink: /MsSql////  
 
 toc: true
 toc_sticky: true
